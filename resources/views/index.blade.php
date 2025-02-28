@@ -138,7 +138,8 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "{{ url('/') }}/saveData",
+                    // url: "{{ url('/') }}/saveData",
+                    url: "https://tes22-production-725b.up.railway.app/saveData",
                     data: formData,
                     processData: false,
                     contentType: false,
