@@ -112,7 +112,7 @@
                 ],
                 "ajax": {
                     // "url": "{{ route('indexData') }}",
-                    "url": "{{ secure_url('indexData') }}",
+                    "url": window.location.origin + "/indexData",
                     "headers": {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
