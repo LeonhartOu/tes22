@@ -186,7 +186,8 @@
                 $('#modalDetail').modal('show');
 
                 $.ajax({
-                    url: "{{ url('/detailData') }}/" + id,
+                    // url: "{{ url('/detailData') }}/" + id,
+                    url: "https://tes22-production-725b.up.railway.app/detailData/" + id,
                     type: "GET",
                     dataType: "JSON",
                     success: function(response) {
