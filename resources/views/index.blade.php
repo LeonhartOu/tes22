@@ -111,7 +111,8 @@
                     ['10', '25', '50', 'All']
                 ],
                 "ajax": {
-                    "url": "{{ route('indexData') }}",
+                    // "url": "{{ route('indexData') }}",
+                    "url": "{{ secure_url('indexData') }}",
                     "headers": {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
