@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InputController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [InputController::class, 'viewList'])->name('index');
+Route::get('/indexData', [InputController::class, 'getData'])->name('indexData'); // Get Data
+Route::post('/saveData', [InputController::class, 'insertData'])->name('saveData'); // Insert Data
+
+Route::get('/detailData/{id}', [InputController::class, 'getDetailData'])->name(''); // LIST DETAIL
+Route::post('/saveEdit/{id}', [InputController::class, 'saveChangesData'])->name('saveEdit'); // LIST DETAIL
+Route::delete('/deleteData/{id}', [InputController::class, 'deleteData'])->name('deleteData');
+
