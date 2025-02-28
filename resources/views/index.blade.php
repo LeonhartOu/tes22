@@ -213,7 +213,7 @@
 
                 $.ajax({
                     // url: "{{ url('/saveEdit') }}/" + id,
-                    url: "https://tes22-production-725b.up.railway.app/saveEdit",
+                    url: "https://tes22-production-725b.up.railway.app/saveEdit" + id,
                     type: 'POST',
                     data: formData,
                     processData: false,
@@ -250,7 +250,7 @@
 
                 $.ajax({
                     // url: "{{ url('/deleteData') }}/" + id,
-                    url: "https://tes22-production-725b.up.railway.app/saveEdit" + id,
+                    url: "https://tes22-production-725b.up.railway.app/deleteData" + id,
 
                     type: 'DELETE',
                     dataType: 'json',
